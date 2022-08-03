@@ -3,7 +3,7 @@
 # comprising at least 3 of the 4 types of characters (upper case, lower case, number and special character).
 
 #You can choose the wordlist by giving it absolute path.
-Existing_Wordlist = int(input("Wordlist Absolute Path : "))
+Existing_Wordlist = str(input("Wordlist Absolute Path : "))
 print("A file named 'Sorted_Wordlist.txt' will be create where the script is, be careful if you have already a file wich have the same name !")
 
 #It open the file you want to sort and create another one where to get the filtered content (you can specify an other encoding).
