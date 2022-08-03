@@ -2,9 +2,12 @@
 #The sorting is based on the rule of minimum requirements of 8 characters,
 # comprising at least 3 of the 4 types of characters (upper case, lower case, number and special character).
 
+#You can choose the wordlist by giving it absolute path.
+Existing_Wordlist = int(input("Wordlist Absolute Path : "))
+print("A file named 'Sorted_Wordlist.txt' will be create where the script is, be careful if you have already a file wich have the same name !")
 
 #It open the file you want to sort and create another one where to get the filtered content (you can specify an other encoding).
-with open("Existing_Wordlist.txt",'r', encoding = "utf-8") as file, open("Sorted_Wordlist.txt",'w') as new_file:
+with open(Existing_Wordlist,'r', encoding = "utf-8") as file, open("Sorted_Wordlist.txt",'w') as new_file:
 
     text = file.read()
     list = text.split("\n")
@@ -12,7 +15,7 @@ with open("Existing_Wordlist.txt",'r', encoding = "utf-8") as file, open("Sorted
 
     #Testing for the presence of the different types of characters.
     for word in list:
-
+        
         #Declaring bool variables NB (NumBer), UC (UpperCase), LC (LowerCase) and SC (Special Character).
         NB = False
         UC = False
