@@ -4,13 +4,12 @@
 
 #You can choose the wordlist by giving it absolute path.
 Existing_Wordlist = str(input("\n Wordlist Absolute Path : "))
-Sorted_Wordlist = str(input("\n Name For The Sorted Wordlist : ")) + ".txt"
 
 #A Little Disclaimer
-print("\n \n !!! A file named '" + Sorted_Wordlist + "' will be create where the script is, be careful if you have already a file wich have the same name !!! \n \n")
+print("\n \n !!! A file named 'Sorted_Wordlist.txt' will be create where the script is, be careful if you have already a file wich have the same name !!! \n \n")
 
 #It open the file you want to sort and create another one where to get the filtered content (you can specify an other encoding).
-with open(Existing_Wordlist, 'r', encoding = "utf-8") as file, open(Sorted_Wordlist, 'w', encoding = "utf-8") as new_file:
+with open(Existing_Wordlist, 'r', encoding = "ANSI") as file, open("Sorted_Wordlist.txt", 'w', encoding = "ANSI") as new_file:
 
     text = file.read()
     list = text.split("\n")
