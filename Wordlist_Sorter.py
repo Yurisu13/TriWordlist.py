@@ -4,7 +4,7 @@
 
 
 #It open the file you want to sort and create another one where to get the filtered content (you can specify an other encoding).
-with open("Existing_Wordlist.txt", 'r', encoding = "utf-8") as file, open("Sorted_Wordlist.txt", 'w', encoding = "utf-8") as new_file:
+with open("Existing_Wordlist.txt", 'r', encoding = "ANSI") as file, open("Sorted_Wordlist.txt", 'w', encoding = "ANSI") as new_file:
 
     text = file.read()
     list = text.split("\n")
